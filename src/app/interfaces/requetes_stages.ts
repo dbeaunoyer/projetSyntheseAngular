@@ -7,6 +7,7 @@ export interface Requetes_stages {
     endDate: Date
     program: String
     requirements: String
+    studentName : String
     stageType: String
     hoursPerWeek: Number
     additionalInfo: String

@@ -1,2 +1,37 @@
 <app-menu></app-menu>
-<p>demandes-stages works!</p>
+<div class="container">
+    <h2>Demande de stage</h2>
+    <button class = "btn btn-warning" role="alert">Ajouter une demande</button>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Poste</th>
+            <th scope="col">Secteur d'activité</th>
+            <th scope="col">Région</th>
+            <th scope="col">Date d'inscription</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let requeteStage of requetesStage">
+            <th scope="row"><i class="fa-solid fa-graduation-cap"></i> 
+            </th>
+            <td class="hidden">{{requeteStage._id}}</td>
+            <td>{{requeteStage.title}}</td>
+            <td>{{requeteStage.studentName}} </td>
+            <td>{{requeteStage.title}}</td>
+            <td> {{requeteStage.startDate}}
+            </td>
+            <td><i class="fa-solid fa-eye p-2"></i>
+                <i class="fa-solid fa-pen-to-square p-2"></i>
+               <i class="fa-solid fa-trash-can p-2"></i> 
+            </td>
+    
+          </tr>
+    
+        </tbody>
+      </table>
+
+
+</div>
+

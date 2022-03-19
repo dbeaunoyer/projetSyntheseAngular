@@ -1,12 +1,42 @@
 <div>
     <app-menu></app-menu>
-</div>
-<div>
-    <h1>Candidats</h1>
-    <button type="button" class="btn btn-primary" (click)="addCandidat()">Ajouter un candidat</button>
-    <div class="card-group">
-        <ng-container *ngFor="let candidat of candidats">
-            <app-candidat [candidat]="candidat"></app-candidat>
-        </ng-container>
+    <app-menu></app-menu>
+    <div class="container">
+        <h2>Demande de stage</h2>
+        <button class = "btn btn-warning" role="alert">Ajouter une demande</button>
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Poste</th>
+                <th scope="col">Secteur d'activité</th>
+                <th scope="col">Région</th>
+                <th scope="col">Date d'inscription</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" *ngFor="let candidat of candidats"><i class="fa-solid fa-graduation-cap">
+    
+    
+                </i>Intégrateur web 
+                <p>{{candidat.name}}
+    
+                </p> </th>
+                
+                <td>Cégep Trois-Rivières</td>
+                <td>Mauricie</td>
+                <td> 2022-03-03
+                </td>
+                <td> <i class="fa-solid fa-eye p-2"></i>
+                  <i class="fa-solid fa-pen-to-square p-2"></i>
+                 <i class="fa-solid fa-trash-can p-2"></i> 
+                </td>
+        
+              </tr>
+        
+            </tbody>
+          </table>
+    
+    
     </div>
-</div>

@@ -6,6 +6,7 @@ export interface Offres_stages {
     startDate: Date
     endDate: Date
     program: String
+    studentName : String
     requirements: String
     stageType: String
     hoursPerWeek: Number
